@@ -1,18 +1,13 @@
 import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
-import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TextInput, TouchableOpacity } from 'react-native-gesture-handler';
+import { ImageBackground } from 'react-native';
 
 export default function Signin() {
   return (
     <View style={styles.container}>
-
-      <View style={styles.backImage}>
-        <Image
-          source={require('../../assets/img/back-login.png')}
-          style={{ width:'100%', padding:0, margin:0 }}
-          resizeMode="contain"
-        />
-      </View>
+      <ScrollView>
+        
 
      
 
@@ -35,6 +30,7 @@ export default function Signin() {
           <TextInput
               placeholder='Sua senha'
               styles={styles.input}
+          
             
             />
         </View>
@@ -52,6 +48,8 @@ export default function Signin() {
       <TouchableOpacity style={styles.buttonRec}>
         <Text style={styles.buttonRecText}>Não consegue entrar?</Text>
       </TouchableOpacity>
+      
+      </ScrollView>
       
     </View>
   );
